@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EkoPort - Anket Sonuçları & Öneriler</title>
+    <!-- TAILWIND CSS CDN (EKLENDİ) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-emerald-50 text-slate-800 font-sans min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+    <header class="bg-gradient-to-r from-emerald-800 to-green-700 text-white text-center py-10 px-4 shadow-lg">
+        <h1 class="text-3xl md:text-4xl font-extrabold mb-2">📊 Yeşil Ev Analiz Sonucun</h1>
+        <p class="text-emerald-100 text-lg max-w-2xl mx-auto">Girdiğin bilgilere göre karbon ayak izi değerlendirmen çıkarıldı!</p>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-3xl mx-auto px-6 py-8 flex-grow w-full">
+        
+        <div class="bg-white rounded-2xl p-6 md:p-8 mb-8 shadow-md border-l-8 border-emerald-600">
+            
+            <!-- SKOR EKRANI -->
+            <div class="text-center bg-emerald-50 border-2 border-dashed border-emerald-500 rounded-2xl p-6 mb-8">
+                <h2 class="text-xl font-bold text-emerald-900 mb-2">Yeşil Ev Skoru</h2>
+                <div class="text-5xl font-extrabold text-emerald-700 my-2">{{ puan }} / 100</div>
+                <p class="text-slate-600 text-sm">Doğa dostu bir yaşam için harika adımlar atıyorsun!</p>
+            </div>
+
+            <!-- KİŞİSELLEŞTİRİLMİŞ TAVSİYELER -->
+            <h3 class="text-xl font-bold text-emerald-900 mb-4 flex items-center gap-2">
+                💡 Karbon Ayak İzini Azaltmak İçin Tavsiyelerin:
+            </h3>
+            
+            <div class="space-y-3">
+                {% for onerı in oneriler %}
+                    <div class="bg-emerald-50/70 border-l-4 border-emerald-500 p-4 rounded-r-xl text-slate-700 font-medium text-base">
+                        {{ onerı }}
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+
+        <!-- BUTONLAR -->
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 my-6">
+            <a href="/yesil-ev-anketi" class="w-full sm:w-auto text-center bg-slate-500 hover:bg-slate-600 text-white font-bold px-6 py-3 rounded-full shadow transition">
+                🔄 Anket Çözmeyi Tekrar Dene
+            </a>
+            <a href="/" class="w-full sm:w-auto text-center bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5">
+                🏠 Ana Sayfaya Dön
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>

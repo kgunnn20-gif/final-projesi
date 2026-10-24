@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EkoPort - Yeşil Ev Anketi</title>
+    <!-- TAILWIND CSS CDN (EKLENDİ) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-emerald-50 text-slate-800 font-sans min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+    <header class="bg-gradient-to-r from-emerald-800 to-green-700 text-white text-center py-10 px-4 shadow-lg">
+        <h1 class="text-3xl md:text-4xl font-extrabold mb-2">🏡 Yeşil Ev Anketi</h1>
+        <p class="text-emerald-100 text-lg max-w-2xl mx-auto">Günlük alışkanlıklarınla doğayı ne kadar koruduğunu test et ve kişisel önerilerini al!</p>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-3xl mx-auto px-6 py-8 flex-grow w-full">
+        
+        <form action="/sonuc" method="POST" class="bg-white rounded-2xl p-6 md:p-8 mb-8 shadow-md border-l-8 border-emerald-600">
+            
+            <!-- Soru 1 -->
+            <div class="mb-6 pb-6 border-b border-slate-200">
+                <label class="block font-bold text-emerald-900 text-lg mb-3">
+                    1. Odadan çıkarken veya yatarken gereksiz yanan lambaları/ışıkları kapatır mısın?
+                </label>
+                <div class="space-y-2">
+                    <label class="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-emerald-50 transition">
+                        <input type="radio" name="isiklar" value="evet" required class="w-5 h-5 accent-emerald-600">
+                        <span class="text-slate-700">Evet, her zaman dikkat ederim.</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-emerald-50 transition">
+                        <input type="radio" name="isiklar" value="hayir" class="w-5 h-5 accent-emerald-600">
+                        <span class="text-slate-700">Hayır, bazen açık unutabiliyorum.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Soru 2 -->
+            <div class="mb-6 pb-6 border-b border-slate-200">
+                <label class="block font-bold text-emerald-900 text-lg mb-3">
+                    2. Kısa mesafelerde (okula, markete giderken) genellikle nasıl ulaşım sağlarsın?
+                </label>
+                <div class="space-y-2">
+                    <label class="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-emerald-50 transition">
+                        <input type="radio" name="ulasim" value="yuru" required class="w-5 h-5 accent-emerald-600">
+                        <span class="text-slate-700">Yürüyerek veya bisikletle giderim.</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-emerald-50 transition">
+                        <input type="radio" name="ulasim" value="toplu" class="w-5 h-5 accent-emerald-600">
+                        <span class="text-slate-700">Toplu taşıma kullanırım.</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-emerald-50 transition">
+                        <input type="radio" name="ulasim" value="araba" class="w-5 h-5 accent-emerald-600">
+                        <span class="text-slate-700">Çoğunlukla özel araba ile gideriz.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Soru 3 -->
+            <div class="mb-6 pb-6 border-b border-slate-200">
+                <label class="block font-bold text-emerald-900 text-lg mb-3">
+                    3. Evde kağıt, plastik ve cam atıklarını çöpe atarken ayrıştırıp geri dönüşüm kutusuna atar mısın?
+                </label>
+                <div class="space-y-2">
+                    <label class="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-emerald-50 transition">
+                        <input type="radio" name="geri_donusum" value="evet" required class="w-5 h-5 accent-emerald-600">
+                        <span class="text-slate-700">Evet, düzenli olarak ayrıştırıyorum.</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-emerald-50 transition">
+                        <input type="radio" name="geri_donusum" value="hayir" class="w-5 h-5 accent-emerald-600">
+                        <span class="text-slate-700">Hayır, hepsini aynı çöpe atıyorum.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Soru 4 -->
+            <div class="mb-6">
+                <label class="block font-bold text-emerald-900 text-lg mb-3">
+                    4. Dışarıdayken veya okulda tek kullanımlık plastik şişe / poşet kullanmaktan kaçınıyor musun?
+                </label>
+                <div class="space-y-2">
+                    <label class="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-emerald-50 transition">
+                        <input type="radio" name="plastik" value="hayir" required class="w-5 h-5 accent-emerald-600">
+                        <span class="text-slate-700">Evet, matara ve bez çanta kullanıyorum.</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-emerald-50 transition">
+                        <input type="radio" name="plastik" value="evet" class="w-5 h-5 accent-emerald-600">
+                        <span class="text-slate-700">Hayır, genellikle tek kullanımlık plastik alıyorum.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- SUBMIT BUTTON -->
+            <div class="flex justify-end mt-8">
+                <button type="submit" class="bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 cursor-pointer">
+                    Sonuçları Gör ve Önerileri Al 🎯
+                </button>
+            </div>
+
+        </form>
+
+        <div class="flex justify-start my-6">
+            <a href="/etkiler-ve-cozumler" class="inline-flex items-center gap-2 bg-slate-500 hover:bg-slate-600 text-white font-bold px-6 py-3 rounded-full shadow transition">
+                ⬅️ Geri: Etkiler ve Çözümler
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>

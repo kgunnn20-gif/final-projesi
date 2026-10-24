@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EkoPort - İklim Değişikliği ve Nedenleri</title>
+    <!-- TAILWIND CSS CDN (EKLENDİ) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-emerald-50 text-slate-800 font-sans min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+    <header class="bg-gradient-to-r from-emerald-800 to-green-700 text-white text-center py-10 px-4 shadow-lg">
+        <h1 class="text-3xl md:text-4xl font-extrabold mb-2">🌍 EkoPort: İklim Bilinçlendirme Portalı</h1>
+        <p class="text-emerald-100 text-lg max-w-2xl mx-auto">Geleceğimizi korumak için iklim krizini anlamakla işe başlayalım!</p>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-4xl mx-auto px-6 py-8 flex-grow w-full">
+        
+        <!-- İKLİM HABERLERİ BÖLÜMÜ -->
+        <section class="bg-white rounded-2xl p-6 md:p-8 mb-8 shadow-md border-l-8 border-emerald-600">
+            <h2 class="text-2xl font-bold text-emerald-900 mb-6 flex items-center gap-2">
+                📰 Son İklim Haberleri & Gelişmeler
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-emerald-50/80 p-5 rounded-xl border border-emerald-200 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-emerald-800 mb-2">🌡️ Küresel Sıcaklık Rekorları</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Dünya genelinde son yıllarda ortalama sıcaklıklar sanayi öncesi döneme göre rekor seviyelere ulaştı.</p>
+                </div>
+                <div class="bg-emerald-50/80 p-5 rounded-xl border border-emerald-200 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-emerald-800 mb-2">🧊 Buzullar Hızla Eriyor</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Kutuplardaki erime hızı son 20 yılda üç katına çıktı. Deniz seviyeleri kıyı şehirlerini tehdit ediyor.</p>
+                </div>
+                <div class="bg-emerald-50/80 p-5 rounded-xl border border-emerald-200 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-emerald-800 mb-2">💨 Karbon Oranı Zirvede</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Atmosferdeki CO₂ yoğunluğu insanlık tarihinin en yüksek seviyesine ulaşarak sera gazı etkisini artırdı.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- İKLİM DEĞİŞİKLİĞİ NEDEN VAR? -->
+        <section class="bg-white rounded-2xl p-6 md:p-8 mb-8 shadow-md border-l-8 border-emerald-600">
+            <h2 class="text-2xl font-bold text-emerald-900 mb-4">❓ İklim Değişikliği Neden Var?</h2>
+            <p class="text-slate-700 leading-relaxed mb-4">
+                İklim değişikliği, atmosferde ısı tutan gazların (Sera Gazları) artmasıyla oluşan <strong>Küresel Isınma</strong> sonucunda meydana gelir. Bunun başlıca nedenleri şunlardır:
+            </p>
+            
+            <ul class="space-y-3 pl-4 list-disc text-slate-700">
+                <li><strong class="text-emerald-900">Fosil Yakıt Kullanımı:</strong> Kömür, petrol ve doğal gaz kullanımı atmosfere devasa miktarda CO₂ salar.</li>
+                <li><strong class="text-emerald-900">Ormansızlaşma:</strong> Ağaçlar CO₂'yi emerek temizler. Ormanların yok edilmesi bu dengeli yapıyı bozar.</li>
+                <li><strong class="text-emerald-900">Aşırı Sanayileşme ve Üretim:</strong> Fabrikalar ve kontrolsüz üretim doğaya zararlı gazlar yayar.</li>
+                <li><strong class="text-emerald-900">Bilinçsiz Tüketim & Atıklar:</strong> Plastik kullanımı ve biriken çöpler metan gazı üreterek ısınmayı tetikler.</li>
+            </ul>
+        </section>
+
+        <!-- İLERLEME BUTONU -->
+        <div class="flex justify-end my-6">
+            <a href="/etkiler-ve-cozumler" class="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5">
+                Sonraki: Kime Zarar Veriyor? ➡️
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>
